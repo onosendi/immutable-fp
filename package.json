@@ -1,0 +1,27 @@
+{
+  "name": "immutable-fp",
+  "version": "0.0.0",
+  "description": "immutable-js Fantasy Land compatible extensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onosendi/immutable-fp.git"
+  },
+  "keywords": [
+    "functional",
+    "immutable",
+    "monoid",
+    "monad",
+    "applicative",
+    "traversable"
+  ],
+  "author": "drboolean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onosendi/immutable-fp/issues"
+  },
+  "homepage": "https://github.com/onosendi/immutable-fp#readme"
+}
