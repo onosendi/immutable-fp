@@ -2,7 +2,7 @@
   "name": "immutable-fp",
   "version": "0.0.1",
   "description": "Fantasy Land extensions for immutablejs",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel index.js --out-dir build --extensions '.js'",
     "clean-build-dir": "rimraf build",
