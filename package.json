@@ -1,10 +1,20 @@
 {
   "name": "immutable-fp",
   "version": "0.0.0",
-  "description": "immutable-js Fantasy Land compatible extensions",
+  "description": "Fantasy Land extensions for immutablejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel index.js --out-dir build --extensions '.js'",
+    "clean-build-dir": "rimraf build",
+    "lint": "eslint --ext js .",
+    "pretest": "npm run --silent lint",
+    "test": "npm run --silent tests-only",
+    "posttest": "aud --omit=dev",
+    "tests-only": "mocha test.js",
+    "version": "auto-changelog && git add CHANGELOG.md",
+    "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+    "prepublish": "not-in-publish || npm run prepublish-only",
+    "prepublishOnly": "safe-publish-latest && npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +33,24 @@
   "bugs": {
     "url": "https://github.com/onosendi/immutable-fp/issues"
   },
-  "homepage": "https://github.com/onosendi/immutable-fp#readme"
+  "homepage": "https://github.com/onosendi/immutable-fp#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@onosendi/eslint-config": "^2.2.0",
+    "aud": "^2.0.0",
+    "auto-changelog": "^2.4.0",
+    "daggy": "^1.5.0",
+    "fantasy-identities": "^0.0.1",
+    "in-publish": "^2.0.1",
+    "mocha": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "safe-publish-latest": "^2.0.0"
+  },
+  "peerDependencies": {
+    "immutable": "^4.1.0"
+  },
+  "dependencies": {
+    "immutable": "^4.1.0"
+  }
 }

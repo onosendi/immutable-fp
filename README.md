@@ -1,8 +1,8 @@
 # immutable-ext
-fantasyland extensions for immutablejs
+Fantasy Land extensions for immutablejs
 
 # Install
-`npm install immutable-ext`
+`npm install immutable-fp`
 
 
 # What is this?
