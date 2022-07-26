@@ -1,6 +1,6 @@
 {
   "name": "immutable-fp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fantasy Land extensions for immutablejs",
   "main": "index.js",
   "scripts": {
