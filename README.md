@@ -1,4 +1,4 @@
-# immutable-ext
+# immutable-fp
 Fantasy Land extensions for immutablejs
 
 # Install
